@@ -25,6 +25,6 @@ namespace Cities.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Cities> Cities { get; set; }
     }
 }

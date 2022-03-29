@@ -12,7 +12,7 @@ namespace Cities.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class City
+    public partial class Cities
     {
         public int Id { get; set; }
         public string City1 { get; set; }
