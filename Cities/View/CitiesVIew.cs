@@ -29,5 +29,30 @@ namespace Cities.View
         {
             dgvCities.DataSource = citiesController.GetAll();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RefreshTable()
+        {
+            dgvCities.DataSource = citiesController.GetAll();
+        }
+
+        private void createbtn_Click(object sender, EventArgs e)
+        {
+            Models.City cities = new Models.City();
+            cities.Population = int.Parse(populationtxt.Text);
+            cities.City1 = citytxt.Text;
+            citiesController.CreateCity(cities);
+            RefreshTable();
+            
+        }
     }
 }
