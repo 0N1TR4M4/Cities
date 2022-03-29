@@ -22,7 +22,7 @@ namespace Cities.Controller
             using (CitiesDBEntities ex = new CitiesDBEntities())
             {
                 var lastCity = ex.Cities.ToList().LastOrDefault();
-                if(lastCity == null)
+                if (lastCity == null)
                 {
                     lastCity = new Models.City();
                     lastCity.Id = 0;
@@ -30,6 +30,20 @@ namespace Cities.Controller
                 s.Id = lastCity.Id + 1;
                 ex.Cities.Add(s);
                 ex.SaveChanges();
+            }
+        }
+        public void UpdateCities(int id, City c)
+        {
+            using (CitiesDBEntities ex = new CitiesDBEntities())
+            {
+                var citiesToUpdate = ex.Cities.Where(p => p.Id == id).FirstOrDefault();
+                if (citiesToUpdate != null)
+                {
+                    citiesToUpdate.Id = c.Id;
+                    citiesToUpdate.City1 = c.City1;
+                    citiesToUpdate.Population = c.Population;
+                    ex.SaveChanges();
+                }
             }
         }
     }

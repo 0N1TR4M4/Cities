@@ -40,6 +40,7 @@ namespace Cities.View
             this.citytxt = new System.Windows.Forms.TextBox();
             this.citylbl = new System.Windows.Forms.Label();
             this.populationlbl = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -129,11 +130,22 @@ namespace Cities.View
             this.populationlbl.TabIndex = 5;
             this.populationlbl.Text = "Population";
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(661, 118);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(114, 63);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // CitiesVIew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.populationlbl);
             this.Controls.Add(this.citylbl);
             this.Controls.Add(this.citytxt);
@@ -162,5 +174,6 @@ namespace Cities.View
         private System.Windows.Forms.TextBox citytxt;
         private System.Windows.Forms.Label citylbl;
         private System.Windows.Forms.Label populationlbl;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

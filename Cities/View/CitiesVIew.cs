@@ -54,5 +54,13 @@ namespace Cities.View
             RefreshTable();
             
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvCities.CurrentRow;
+            int id = int.Parse(row.Cells["Id"].Value.ToString());
+            citiesController.UpdateCities(id, );
+            RefreshTable();
+        }
     }
 }
