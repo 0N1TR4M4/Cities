@@ -10,7 +10,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Nme" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="City" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Population" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="CitiesDBModelStoreContainer">
@@ -26,10 +26,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Nme" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Population" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="CitiesDBEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CitiesDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cities" EntityType="Self.City" />
         </EntityContainer>
       </Schema>
@@ -37,12 +37,12 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CitiesDBModelStoreContainer" CdmEntityContainer="CitiesDBEntities1">
+        <EntityContainerMapping StorageEntityContainer="CitiesDBModelStoreContainer" CdmEntityContainer="CitiesDBEntities">
           <EntitySetMapping Name="Cities">
             <EntityTypeMapping TypeName="CitiesDBModel.City">
               <MappingFragment StoreEntitySet="Cities">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Nme" ColumnName="Nme" />
+                <ScalarProperty Name="City1" ColumnName="City" />
                 <ScalarProperty Name="Population" ColumnName="Population" />
               </MappingFragment>
             </EntityTypeMapping>

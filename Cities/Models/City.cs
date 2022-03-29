@@ -15,7 +15,7 @@ namespace Cities.Models
     public partial class City
     {
         public int Id { get; set; }
-        public string Nme { get; set; }
+        public string City1 { get; set; }
         public int Population { get; set; }
     }
 }

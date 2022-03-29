@@ -11,7 +11,7 @@ namespace Cities.Controller
     {
         public List<City> GetAll()
         {
-            using (CitiesDBEntities1 c = new CitiesDBEntities1())
+            using (CitiesDBEntities c = new CitiesDBEntities())
             {
                 return c.Cities.ToList();
             }

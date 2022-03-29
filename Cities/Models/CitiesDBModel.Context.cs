@@ -13,10 +13,10 @@ namespace Cities.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CitiesDBEntities1 : DbContext
+    public partial class CitiesDBEntities : DbContext
     {
-        public CitiesDBEntities1()
-            : base("name=CitiesDBEntities1")
+        public CitiesDBEntities()
+            : base("name=CitiesDBEntities")
         {
         }
     

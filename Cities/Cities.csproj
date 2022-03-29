@@ -71,23 +71,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CitiesController.cs" />
-    <Compile Include="Models\CitiesModel.Context.cs">
+    <Compile Include="Models\CitiesDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CitiesModel.Context.tt</DependentUpon>
+      <DependentUpon>CitiesDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CitiesModel.cs">
+    <Compile Include="Models\CitiesDBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CitiesModel.tt</DependentUpon>
+      <DependentUpon>CitiesDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CitiesModel.Designer.cs">
+    <Compile Include="Models\CitiesDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CitiesModel.edmx</DependentUpon>
+      <DependentUpon>CitiesDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\City.cs">
-      <DependentUpon>CitiesModel.tt</DependentUpon>
+      <DependentUpon>CitiesDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,12 +109,13 @@
     <EmbeddedResource Include="View\CitiesVIew.resx">
       <DependentUpon>CitiesVIew.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\CitiesModel.edmx">
+    <None Include="Cities.Models.City.datasource" />
+    <EntityDeploy Include="Models\CitiesDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CitiesModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>CitiesDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\CitiesModel.edmx.diagram">
-      <DependentUpon>CitiesModel.edmx</DependentUpon>
+    <None Include="Models\CitiesDBModel.edmx.diagram">
+      <DependentUpon>CitiesDBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -150,15 +151,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>CitiesDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Models\CitiesModel.Context.tt">
+    <Content Include="Models\CitiesDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CitiesModel.edmx</DependentUpon>
-      <LastGenOutput>CitiesModel.Context.cs</LastGenOutput>
+      <DependentUpon>CitiesDBModel.edmx</DependentUpon>
+      <LastGenOutput>CitiesDBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\CitiesModel.tt">
+    <Content Include="Models\CitiesDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CitiesModel.edmx</DependentUpon>
-      <LastGenOutput>CitiesModel.cs</LastGenOutput>
+      <DependentUpon>CitiesDBModel.edmx</DependentUpon>
+      <LastGenOutput>CitiesDBModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup />
