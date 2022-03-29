@@ -79,7 +79,7 @@ namespace Cities.View
             // 
             // cityBindingSource
             // 
-            this.cityBindingSource.DataSource = typeof(Cities.Models.Cities);
+            this.cityBindingSource.DataSource = typeof(Cities.Models.City);
             // 
             // createbtn
             // 

@@ -9,7 +9,7 @@ namespace Cities.Controller
 {
     class CitiesController
     {
-        public List<Models.Cities> GetAll()
+        public List<Models.City> GetAll()
         {
             using (CitiesDBEntities c = new CitiesDBEntities())
             {
@@ -17,14 +17,14 @@ namespace Cities.Controller
             }
         }
 
-        public void CreateCity(Models.Cities s)
+        public void CreateCity(Models.City s)
         {
             using (CitiesDBEntities ex = new CitiesDBEntities())
             {
                 var lastCity = ex.Cities.ToList().LastOrDefault();
                 if(lastCity == null)
                 {
-                    lastCity = new Models.Cities();
+                    lastCity = new Models.City();
                     lastCity.Id = 0;
                 }
                 s.Id = lastCity.Id + 1;

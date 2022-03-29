@@ -47,7 +47,7 @@ namespace Cities.View
 
         private void createbtn_Click(object sender, EventArgs e)
         {
-            Models.Cities cities = new Models.Cities();
+            Models.City cities = new Models.City();
             cities.Population = int.Parse(populationtxt.Text);
             cities.City1 = citytxt.Text;
             citiesController.CreateCity(cities);
